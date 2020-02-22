@@ -1,0 +1,46 @@
+/*TABLA */
+table#tbContenido {
+    border: 1px solid #000;
+}
+table#tbContenido td {
+    padding: 5px 10px;
+    cursor: pointer;
+}
+table#tbUnirLetras td {
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+
+/* BOTONES */
+
+/* comunes */
+.bg-orange{
+    background-color: #fd7e14
+}
+
+.alert-manu {
+/*    position: fixed;
+    bottom: 10px;
+    right: 10px;    */
+    padding: 5px 15px;
+    margin: 0;
+    color: #fff;
+    width: max-content;
+    margin-bottom: 10px;
+}
+.alert-manu-success{
+   background-color: #28a745;
+}
+.alert-manu-fail{
+   background-color: #dc3545;
+}
+label#lblResultado {
+    margin: 0;
+}
+/* imagenes */
+.vocales{
+    cursor: pointer;
+    width: 350px;
+    height: 250px;
+}

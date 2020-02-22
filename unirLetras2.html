@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Unir Ltras</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="css/bootstrap.min.css" rel="stylesheet"/>
+        <link href="css/style.css" rel="stylesheet"/>
+    </head>
+    <body>
+        <div class="container">
+            <div class="row">
+                <div class="form-control bg-primary">
+                    <h5 class="text-white text-center">SELECCIONA VOCAL LUEGO IMAGEN</h5>
+                </div>
+                <div class="col-md-12">
+                    <div class="alert-manu alert-manu-success">
+                        <label id="lblResultado">Suerte</label>
+                    </div>    
+                </div>
+                <table class="table" id="tbUnirLetras">
+                    <tbody>
+                        <tr>
+                            <td id="A"><img data-vocal="A" class="vocal" src="images/unirletras/a.png" alt=""/></td>
+                            <td></td>
+                            <td id="E"><img data-img="E" class="imagen" src="images/unirletras/estrella.png" alt=""/></td>
+                        </tr>
+                        <tr>
+                            <td id="E"><img data-vocal="E" class="vocal" src="images/unirletras/e.png" alt=""/></td>
+                            <td></td>
+                            <td id="U"><img data-img="U" class="imagen" src="images/unirletras/unicornio.png" alt=""/></td>
+                        </tr>
+                        <tr>
+                            <td id="I"><img data-vocal="I" class="vocal" src="images/unirletras/i.png" alt=""/></td>
+                            <td></td>
+                            <td id="O"><img data-img="O" class="imagen" src="images/unirletras/oso.png" alt=""/></td>
+                        </tr>
+                        <tr>
+                            <td id="O"><img data-vocal="O" class="vocal" src="images/unirletras/o.png" alt=""/></td>
+                            <td></td>
+                            <td id="I"><img data-img="I" class="imagen" src="images/unirletras/iglesia.png" alt=""/></td>
+                        </tr>
+                        <tr>
+                            <td id="U"><img data-vocal="U" class="vocal" src="images/unirletras/u.png" alt=""/></td>
+                            <td></td>
+                            <td id="A"><img data-img="A" class="imagen" src="images/unirletras/armonica.png" alt=""/></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <a href="unirvocalconimagen.html" class="btn btn-outline-danger">ATRÁS</a>
+            <a href="unirLetras3.html" class="btn btn-outline-success">SIGUIENTE</a><br/><br/>
+        </div>
+        <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+        <script>
+            $(document).ready(function () {
+                var vocal;
+                var img;
+                $("img.vocal").on("click", function () {
+                    vocal = $(this).data("vocal");
+                });
+                $("img.imagen").on("click", function () {
+                    img = $(this).data("img");
+                    if (vocal === img) {
+                        $("div.alert-manu").removeClass("alert-manu-fail");
+                        $("div.alert-manu").addClass("alert-manu-success");
+                        $("label#lblResultado").text("Selección correcta");
+                        if (vocal === "A") {
+                            $("td#" + vocal).addClass("bg-success");
+                        } else {
+                            if (vocal === "E") {
+                                $("td#" + vocal).addClass("bg-primary");
+                            } else {
+                                if (vocal === "I") {
+                                    $("td#" + vocal).addClass("bg-danger");
+                                } else {
+                                    if (vocal === "O") {
+                                        $("td#" + vocal).addClass("bg-orange");
+                                    } else {
+                                        if (vocal === "U") {
+                                            $("td#" + vocal).addClass("bg-secondary");
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    } else {
+                        $("label#lblResultado").text("Selección incorrecta");
+                        $("div.alert-manu").removeClass("alert-manu-success");
+                        $("div.alert-manu").addClass("alert-manu-fail");
+                    }
+                });
+            });
+
+
+
+
+        </script>
+    </body>
+</html>

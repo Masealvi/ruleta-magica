@@ -1,0 +1,68 @@
+﻿<!DOCTYPE html>
+<html>
+    <head>
+        <title>SONIDOS ONOMATOPÉYICOS DE OBJETOS</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link href="css/style.css" rel="stylesheet"/>
+    </head>
+    <body>
+        <div class="container"><br/>
+            <div class="form-control bg-success">
+                <h4 class="text-center text-white">SONIDOS ONOMATOPÉYICOS DE OBJETOS</h4>
+            </div><br>
+            <div class="row">
+                <div class="col-lg-4">
+                    <img src="images/objetos/bomba.png" alt="bomba" class="vocales"/>
+                </div>
+                <div class="col-lg-4">
+                    <img src="images/objetos/campana.png" alt="campana" class="vocales"/>
+                </div>
+                <div class="col-lg-4">
+                    <img src="images/objetos/fantasma.png" alt="fantasma" class="vocales"/>
+                </div>
+                <div class="col-lg-4"><br/>
+                    <img src="images/objetos/moto.png" alt="moto" class="vocales"/>
+                </div>
+                <div class="col-lg-4"><br/>
+                    <img src="images/objetos/puerta.png" alt="puerta" class="vocales"/>
+                </div>
+                <div class="col-lg-4"><br/>
+                    <img src="images/objetos/reloj.png" alt="reloj" class="vocales"/>
+                </div>
+            </div><br/>
+            <a href="objetos_1.html" class="btn btn-outline-success">SIGUIENTE</a><br/>
+        </div>
+        <script src="js/jquery-3.4.1.min.js" type="text/javascript"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/popper.min.js"></script>
+        <script>
+            function audio(e) {
+                var reproducir = new Audio();
+                reproducir.src = e;
+                reproducir.play();
+            }
+            window.addEventListener("load", function () {
+                document.querySelectorAll("body img")[0].addEventListener("click", function () {
+                    audio("audios/objetos/bomba.mp3");
+                }, false);
+                document.querySelectorAll("body img")[1].addEventListener("click", function () {
+                    audio("audios/objetos/campana.mp3");
+                }, false);
+                document.querySelectorAll("body img")[2].addEventListener("click", function () {
+                    audio("audios/objetos/boo_fantasma.mp3");
+                }, false);
+                document.querySelectorAll("body img")[3].addEventListener("click", function () {
+                    audio("audios/objetos/moto.mp3");
+                }, false);
+                document.querySelectorAll("body img")[4].addEventListener("click", function () {
+                    audio("audios/objetos/toc-puerta 1.mp3");
+                }, false);
+                document.querySelectorAll("body img")[5].addEventListener("click", function () {
+                    audio("audios/objetos/reloj.mp3");
+                }, false);
+            }, false);
+        </script>
+    </body>
+</html>

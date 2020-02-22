@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Siguiendo Vocal A</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link href="css/bootstrap.min.css" rel="stylesheet"/>
+        <link href="css/style.css" rel="stylesheet"/>
+
+        <style>
+            #tbContenido{
+                border-spacing: 0;
+            }
+            #tbContenido td {
+                border: 1px solid #007bff;
+                width: 40px;
+                height: 40px;
+            }
+            #tbContenido .td-image{
+                width: 120px;
+                height: 120px ;
+                padding: 0;
+                margin: 0;
+            }
+            #tbContenido img{
+                width: auto;
+                height: 120px;
+                padding: 0;
+                margin: 0;
+            }
+
+            .img-container
+            {
+                height: 120px; /* 3 filas * 40px (alto td)  = 120px */
+                width: 120px;  /* 3 colum * 40px (anch td)  = 120px */              
+                overflow: hidden; /* ocultar el contenido que sobrepasa su ancho/alto */
+                border-left: 1px solid #007bff;
+                border-top: 1px solid #007bff;
+            }            
+            .img-container img{
+                width: 120px;
+                height: auto;
+                margin: 0 auto; /* centrar */
+            }
+
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <br/>
+            <!--<div class="row">
+                <div class="col-xs-4 col-sm-4 col-md-4">
+                    <input id="txtRow" value="10" class="form-control"/>
+                </div>
+                <div class="col-xs-4 col-sm-4 col-md-4">
+                    <input id="txtCol" value="15" class="form-control"/>
+                </div>
+                <div class="col-xs-4 col-sm-4 col-md-4">
+                    <input id="txtVocal" value="A" class="form-control"/>                      
+                </div>                
+            </div>
+
+            <hr/>-->
+            <div class="form-control bg-success">
+                <h5 class="text-white">LLEVA EL EQUIPAJE AL AVIÓN SIGUIENDO SOLO LA VOCAL A</h5>
+            </div><br>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="alert-manu alert-manu-success">
+                        <label id="lblResultado"> Encontrar el camino... </label>
+                    </div>    
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="table-responsive">
+                        <input id="txtVocal" hidden=""
+                               value="A" 
+                               data-row="0"
+                               data-col="3"/>
+
+                        <table id="tbContenido">
+                            <tbody>
+                                <tr>
+                                    <td>-</td><td>-</td><td>-</td>
+                                    <td class="bg-orange">A</td><td>A</td><td>A</td>
+                                    <td>A</td><td>A</td><td>A</td><td>A</td>
+                                </tr>
+                                <tr>
+                                    <td>-</td><td>-</td><td>-</td>
+                                    <td>E</td><td>U</td><td>I</td>
+                                    <td>O</td><td>U</td><td>I</td><td>A</td>
+                                </tr>
+                                <tr>
+                                    <td>-</td><td>-</td><td>-</td>
+                                    <td>U</td><td>A</td><td>A</td>
+                                    <td>A</td><td>A</td><td>U</td><td>A</td>
+                                </tr>
+                                <tr>
+                                    <td>U</td><td>I</td><td>E</td>
+                                    <td>U</td><td>A</td><td>E</td><td>U</td>
+                                    <td>A</td><td>I</td><td>A</td>
+                                </tr>
+                                <tr>
+                                    <td>E</td><td>U</td><td>U</td>
+                                    <td>I</td><td>A</td><td>E</td><td>U</td>
+                                    <td>A</td><td>A</td><td>A</td>
+                                </tr>
+                                <tr>
+                                    <td>E</td><td>E</td><td>E</td>
+                                    <td>U</td><td>A</td><td>U</td><td>I</td>
+                                    <td>E</td><td>U</td><td>E</td>
+                                </tr>
+                                <tr>
+                                    <td>A</td><td>A</td><td>A</td>
+                                    <td>A</td><td>A</td><td>E</td><td>A</td>
+                                    <td>A</td><td>A</td><td>I</td>
+                                </tr>
+                                <tr>
+                                    <td>A</td><td>E</td><td>U</td>
+                                    <td>O</td><td>I</td><td>U</td><td>A</td>
+                                    <td>O</td><td>A</td><td>O</td>
+                                </tr>
+                                <tr>
+                                    <td>A</td><td>I</td><td>A</td>
+                                    <td>A</td><td>A</td><td>A</td><td>A</td>
+                                    <td>I</td><td class="bg-orange">A</td><td>O</td>
+                                </tr>
+                                <tr>
+                                    <td>A</td><td>I</td><td>A</td>
+                                    <td>O</td><td>I</td><td>U</td><td>U</td>
+                                    <td>-</td><td>-</td><td>-</td>
+                                </tr>
+                                <tr>
+                                    <td>A</td><td>A</td><td>A</td>
+                                    <td>E</td><td>I</td><td>O</td><td>O</td>
+                                    <td>-</td><td>-</td><td>-</td>
+                                </tr>                        
+                                <tr>
+                                    <td>E</td><td>U</td><td>I</td>
+                                    <td>O</td><td>U</td><td>I</td><td>I</td>
+                                    <td>-</td><td>-</td><td>-</td>
+                                </tr>                        
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div><br/>
+            <a href="siguiendovocalE.html" class="btn btn-outline-success">SIGUIENTE</a>
+
+            <div class="img-container figura1">
+                <img src="images/siguiendovocal/equipaje.jpg" alt="img1"/>
+            </div>
+            <div class="img-container figura2">
+                <img src="images/siguiendovocal/avion.jpg" alt="img2"/>
+            </div>
+        </div>
+
+        <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+        <script type="text/javascript" src="js/app.js"></script>
+
+        <script type="text/javascript">
+            $(document).ready(function () {
+                $siguiendovocal.init();
+            });
+        </script>
+    </body>
+</html>
